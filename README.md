@@ -1,8 +1,11 @@
-Wrangle OpenStreetMap Data
+# Wrangle OpenStreetMap Data  
 
-Map Area
+_by Eric Perbos-Brinck in fulfillment of Udacity’s Data Analyst Nanodegree, Project 3_  
+</br>
 
-Boston, MA, USA
+
+## Map Area: Boston, MA, USA  
+
 
 https://www.openstreetmap.org/relation/2315704
 https://mapzen.com/data/metro-extracts/metro/boston_massachusetts/
@@ -11,14 +14,14 @@ Downloaded on December 1, 2016
 
 This map is from my city of birth: I was born there while my parents (french father, swedish mother) were foreign students at Harvard University before returning to Europe.
 
-"boston_massachusetts_sample.osm" is a shortened version (53 MB) of the original 424 MB file.
+"boston_massachusetts_sample.osm" is a shortened version (24 MB) of the original 424 MB file.
 
 
 
-Problems encountered in the Map and cleaning steps
+### Problems encountered in the Map and cleaning steps
 
 
-a. Incorrect street abbreviations 
+####a. Incorrect street abbreviations 
 Such as 'St' in 'Main St' instead of 'Street'.
 Cleaning step: 
 I used the USPD Street Suffix Abbreviations list as reference for mapping.
