@@ -31,6 +31,7 @@ Cleaning step:
 
 #### Function to correct street names using wrong suffix   
 
+'''
 def update_name(name, mapping):  
 """ Substitutes incorrect abbreviation with correct one. """
     m = street_type_re.search(name)
@@ -49,7 +50,7 @@ def update_name(name, mapping):
             except:
                 pass
     return name
-
+'''
 </br>
 </br>
 
