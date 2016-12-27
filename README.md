@@ -137,27 +137,23 @@ The following SQL queries give a general summary of the data as well as some oth
 
 </br>
 
-#### Number of Nodes:
+#### Number of Nodes: 241,256
 ```
 query = "SELECT count(*) FROM nodes;"
+```   
+</br>
+
+#### Number of Ways: 38,598
 ```
-241,256
-
-
-#### Number of Ways:
-
 query = "SELECT count(*) FROM ways;"
+```   
+</br>
 
-38,598
-
-
-#### Number of Unique Users:
-
+#### Number of Unique Users: 679  
+```
 query = "SELECT count(DISTINCT(temp.uid)) FROM (SELECT user, uid FROM ways UNION ALL SELECT user, uid FROM nodes) as temp;"
-
-679
-
-
+```   
+</br>
 
 #### Top 10 contributors:
 
