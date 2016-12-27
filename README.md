@@ -35,7 +35,7 @@ Cleaning step:
 
 ```
 def update_name(name, mapping):  
-""" Substitutes incorrect abbreviation with correct one. """   
+    """ Substitutes incorrect abbreviation with correct one. """   
 
     m = street_type_re.search(name)
     if m:
@@ -58,7 +58,6 @@ def update_name(name, mapping):
 </br>
 
 ### b. Incorrect postal codes.  
-
 
 US postal codes follow the 5-digit format like '02118' which may lead to different errors.   
 - Some codes differed due to additional signs such as 'MA 02118' or '02136-2460'.   
@@ -95,16 +94,18 @@ def update_zip(post_code):
 </br>
 
 
+### c. Incorrect abbreviation of state entries.   
 
-c. Incorrect abbreviation of state entries.
-All state entries should either contain the official abbreviation for Massachusetts, 'MA', as opposed to 'Mass', 'mass', 'ma', and 'Ma' to 'MA';
-or an empty string, if the state entry is not related to 'MA', such as 'New York', 'NH', ...
+All state entries should either contain the official abbreviation for Massachusetts, 'MA', as opposed to 'Mass', 'mass', 'ma', and 'Ma' to 'MA'; or an empty string, if the state entry is not related to 'MA', such as 'New York', 'NH', ...
+</br>
 
 Cleaning step:
-When entries are a mispell variation of MA such as 'ma', 'Ma', 'Mass' etc., they were corrected with 'MA'.
-Otherwise, like "NY", they were removed.
+- When entries are a mispell variation of MA such as 'ma', 'Ma', 'Mass' etc., they were corrected with 'MA'.
+- Otherwise, like "NY", they were removed.
+</br>
 
-# Function to correct state entries
+#### Function to correct state entries   
+```
 def update_state(state):
     """ Deletes U.S. state entries not related to Massachussets and formats all remaining to 'MA'."""
     
@@ -114,40 +115,42 @@ def update_state(state):
         state = ''
 
     return state
+```
+</br>
+</br>
+</br>
 
-
-
-
-Data Overview
+## Data Overview
 
 The following SQL queries give a general summary of the data as well as some other interesting facts.
 
-File sizes
-boston_massachusetts.osm ................ 424 MB
-boston_massachusetts_sample.osm .... 53 MB
-BostonMA.db ......................................... 31 MB
-nodes.csv .............................................. 19 MB
-nodes_tags.csv ....................................... 7 MB
-ways.csv .................................................. 3 MB
-ways_nodes.csv ...................................... 7 MB
-ways_tags.csv ......................................... 3 MB
+#### File sizes:   
+
+- boston_massachusetts.osm ................ 424 MB
+- boston_massachusetts_sample.osm .... 53 MB
+- BostonMA.db ......................................... 31 MB
+- nodes.csv .............................................. 19 MB
+- nodes_tags.csv ....................................... 7 MB
+- ways.csv .................................................. 3 MB
+- ways_nodes.csv ...................................... 7 MB
+- ways_tags.csv ......................................... 3 MB
 
 
-Number of Nodes
-
+#### Number of Nodes:
+```
 query = "SELECT count(*) FROM nodes;"
-
+```
 241,256
 
 
-Number of Ways
+#### Number of Ways:
 
 query = "SELECT count(*) FROM ways;"
 
 38,598
 
 
-Number of Unique Users
+#### Number of Unique Users:
 
 query = "SELECT count(DISTINCT(temp.uid)) FROM (SELECT user, uid FROM ways UNION ALL SELECT user, uid FROM nodes) as temp;"
 
@@ -155,7 +158,7 @@ query = "SELECT count(DISTINCT(temp.uid)) FROM (SELECT user, uid FROM ways UNION
 
 
 
-Top 10 contributors
+#### Top 10 contributors:
 
 query = "SELECT temp.user, count(*) as posts
 FROM (SELECT user, uid FROM ways UNION ALL SELECT user, uid FROM nodes) as temp 
@@ -176,7 +179,7 @@ The contributions of the Top 10 users is incredibly skewed as they weight over 9
 
 
 
-Top 20 Amenities
+#### Top 20 Amenities:
 
 query = "SELECT temp.value, count(*) as num
 FROM (SELECT key,value FROM ways_tags UNION ALL SELECT key,value FROM nodes_tags) as temp
@@ -207,19 +210,19 @@ WHERE temp.key='amenity' GROUP BY temp.value ORDER BY num DESC LIMIT 20;"
 
 
 
-Additional Ideas
+## Additional Ideas
 
 As I currently live in Stockholm, Sweden, I took note of the massive integration of wheelchair accessibility into public structures and amenities.
 So I searched for information available on wheelchair accessibility  and compared it with the number of amenities.
 
-Number of Wheelchair Accessibility information
+#### Number of Wheelchair Accessibility information:
 
 query = "SELECT count(*) FROM (SELECT key,value FROM ways_tags UNION ALL SELECT key,value FROM nodes_tags) WHERE key='wheelchair';"
 
 32
 
 
-Number of Amenities
+#### Number of Amenities:
 
 query = "SELECT count(*) FROM (SELECT key,value FROM ways_tags UNION ALL SELECT key,value FROM nodes_tags) WHERE key='amenity';"
 
@@ -228,14 +231,18 @@ query = "SELECT count(*) FROM (SELECT key,value FROM ways_tags UNION ALL SELECT 
 
 This ratio 32 / 950 = 3.37% is extremely poor and should be explored in more depths.
 
+</br>
+</br>
+## Follow-up
+
 A follow-up project could focus on a verification of:
 
 (1) what part of the bad performance is due to missing information, ie. how many amenities DO HAVE wheelchair accessibility but that information went MIA,
 
 (2) and what part is reflective of the true situation, ie. many amenities DO NOT HAVE wheelchair accessibility.
 
-Benefits: beside the obvious social benefits and duties for helping persons with restrained mobility, there are business opportunities for commerces (shops, restaurants, hotels) who act accordingly.
+**Benefits**: beside the obvious social benefits and duties for helping persons with restrained mobility, there are business opportunities for commerces (shops, restaurants, hotels) who act accordingly.
 
-Problems: the follow-up project might require a lot of minute manual work to verify the missing information if not available in a compatible database.
+**Problems**: the follow-up project might require a lot of minute manual work to verify the missing information if not available in a compatible database.
 
 
