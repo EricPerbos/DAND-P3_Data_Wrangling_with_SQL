@@ -151,7 +151,8 @@ query = "SELECT count(*) FROM ways;"
 
 #### Number of Unique Users: 679  
 ```
-query = "SELECT count(DISTINCT(temp.uid)) FROM (SELECT user, uid FROM ways UNION ALL SELECT user, uid FROM nodes) as temp;"
+query = "SELECT count(DISTINCT(temp.uid))
+    FROM (SELECT user, uid FROM ways UNION ALL SELECT user, uid FROM nodes) as temp;"
 ```   
 </br>
 
