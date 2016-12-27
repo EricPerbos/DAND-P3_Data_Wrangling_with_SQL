@@ -133,7 +133,8 @@ The following SQL queries give a general summary of the data as well as some oth
 - nodes_tags.csv ............................................. 7 MB
 - ways.csv .......................................................... 3 MB
 - ways_nodes.csv ............................................ 7 MB
-- ways_tags.csv ................................................ 3 MB
+- ways_tags.csv ................................................ 3 MB   
+
 </br>
 
 #### Number of Nodes:
