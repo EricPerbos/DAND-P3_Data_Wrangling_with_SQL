@@ -23,7 +23,8 @@ This map is from my city of birth: I was born there while my parents (french fat
 
 
 ###a. Incorrect street abbreviations 
-Such as 'St' in 'Main St' instead of 'Street'.  
+Such as 'St' in 'Main St' instead of 'Street'.
+</br>
 Cleaning step:   
 - I used the USPD Street Suffix Abbreviations list as reference for mapping.   
 - Then I audited the street types to detect errors and applied corrections based on mapping.
