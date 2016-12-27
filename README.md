@@ -58,16 +58,18 @@ def update_name(name, mapping):
 ### b. Incorrect postal codes.  
 
 
-US postal codes follow the 5-digit format like '02118' which may lead to different errors.
-- Some codes differed due to additional signs such as 'MA 02118' or '02136-2460'.
-- Also some postal codes were not be compatible with the Boston, MA area codes who start with "01xxx" or "02xxx".
-Such as '03079' (Salem in New Hampshire) or they might represent some other entry, such as '(617) 495-1000' is a phone number (Harvard U.).
+US postal codes follow the 5-digit format like '02118' which may lead to different errors.   
+- Some codes differed due to additional signs such as 'MA 02118' or '02136-2460'.   
+- Also some postal codes were not be compatible with the Boston, MA area codes who start with "01xxx" or "02xxx". Such as '03079' (Salem in New Hampshire) or they might represent some other entry, such as '(617) 495-1000' is a phone number (Harvard U.).
 
 Cleaning step: 
-When codes were incorrectly formated with additional signs, I removed those to fit the 5-digit format.
-When codes did not belong to Boston MA area, they were removed.
+- When codes were incorrectly formated with additional signs, I removed those to fit the 5-digit format.
+- When codes did not belong to Boston MA area, they were removed.
+</br>
 
-# Function to correct format of postal codes
+#### Function to correct format of postal codes   
+
+```
 def update_zip(post_code):
     """ Extracts 5-digit postal codes from postal codes in different formats
         and deletes postal codes that do not correspond to Massachussets area.
@@ -86,6 +88,9 @@ def update_zip(post_code):
         post_code = ''
 
     return post_code
+``` 
+</br>
+</br>
 
 
 
