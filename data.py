@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Dec 06 00:16:27 2016
-Stand-alone extract from ProjectCode.ipynb to audit, clean and convert to CSV
+Stand-alone extract from ProjectCode.ipynb to audit, clean and convert XML to CSV
 
 @author: eric
 """
