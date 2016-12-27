@@ -20,7 +20,7 @@ This map is from my city of birth: I was born there while my parents (french fat
 </br>
 
 ## Problems encountered in the Map and cleaning steps
-
+</br>
 
 ###a. Incorrect street abbreviations 
 Such as 'St' in 'Main St' instead of 'Street'.
