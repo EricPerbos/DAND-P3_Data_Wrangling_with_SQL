@@ -126,14 +126,14 @@ The following SQL queries give a general summary of the data as well as some oth
 
 #### File sizes:   
 
-- boston_massachusetts.osm ................ 424 MB
+- boston_massachusetts.osm ................... 424 MB
 - boston_massachusetts_sample.osm .... 53 MB
-- BostonMA.db ......................................... 31 MB
-- nodes.csv .............................................. 19 MB
+- BostonMA.db ........................................... 31 MB
+- nodes.csv ................................................. 19 MB
 - nodes_tags.csv ....................................... 7 MB
-- ways.csv .................................................. 3 MB
-- ways_nodes.csv ...................................... 7 MB
-- ways_tags.csv ......................................... 3 MB
+- ways.csv ................................................... 3 MB
+- ways_nodes.csv ....................................... 7 MB
+- ways_tags.csv .......................................... 3 MB
 
 
 #### Number of Nodes:
