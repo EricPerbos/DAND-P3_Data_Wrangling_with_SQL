@@ -7,16 +7,16 @@ _by Eric Perbos-Brinck in fulfillment of Udacity’s Data Analyst Nanodegree, Pr
 ## Map Area: Boston, MA, USA  
 
 
-https://www.openstreetmap.org/relation/2315704
-https://mapzen.com/data/metro-extracts/metro/boston_massachusetts/
+https://www.openstreetmap.org/relation/2315704   
+
+https://mapzen.com/data/metro-extracts/metro/boston_massachusetts/   
+
 Downloaded on December 1, 2016
 
 
-This map is from my city of birth: I was born there while my parents (french father, swedish mother) were foreign students at Harvard University before returning to Europe.
-
+This map is from my city of birth: I was born there while my parents (french father, swedish mother) were foreign students at Harvard University before returning to Europe.   
 "boston_massachusetts_sample.osm" is a shortened version (24 MB) of the original 424 MB file.
-
-
+</br>
 
 ### Problems encountered in the Map and cleaning steps
 
