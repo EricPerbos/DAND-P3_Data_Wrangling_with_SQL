@@ -25,11 +25,12 @@ This map is from my city of birth: I was born there while my parents (french fat
 ###a. Incorrect street abbreviations 
 Such as 'St' in 'Main St' instead of 'Street'.  
 Cleaning step:   
-I used the USPD Street Suffix Abbreviations list as reference for mapping.   
-Then I audited the street types to detect errors and applied corrections based on mapping.
+- I used the USPD Street Suffix Abbreviations list as reference for mapping.   
+- Then I audited the street types to detect errors and applied corrections based on mapping.
 
 
-# Function to correct street names using wrong suffix
+#### Function to correct street names using wrong suffix   
+
 def update_name(name, mapping):
     """ Substitutes incorrect abbreviation with correct one. """
     m = street_type_re.search(name)
@@ -49,9 +50,11 @@ def update_name(name, mapping):
                 pass
     return name
 
+</br>
+</br>
 
+### b. Incorrect postal codes.  
 
-b. Incorrect postal codes.
 
 US postal codes follow the 5-digit format like '02118' which may lead to different errors.
 - Some codes differed due to additional signs such as 'MA 02118' or '02136-2460'.
