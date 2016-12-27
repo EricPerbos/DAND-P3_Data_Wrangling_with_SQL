@@ -230,7 +230,7 @@ query = "SELECT count(*)
 ```  
 </br>
 
-** This ratio 32 / 950 = 3.37% is extremely poor and should be explored in more depths.** 
+**This ratio 32 / 950 = 3.37% is extremely poor and should be explored in more depths.** 
 
 </br>
 </br>
