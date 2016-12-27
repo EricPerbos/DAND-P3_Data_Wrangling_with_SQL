@@ -164,14 +164,14 @@ GROUP BY temp.user ORDER BY posts DESC LIMIT 10;"
 ```   
 
 crschmidt, 150535  
-jremillard-massgis, 53877
-OceanVortex, 11457
-wambag, 10019
-morganwahl, 8757
-ryebread, 8405)
-MassGIS Import, 7920
-ingalls_imports, 4058
-Ahlzen, 3364
+jremillard-massgis, 53877  
+OceanVortex, 11457  
+wambag, 10019  
+morganwahl, 8757  
+ryebread, 8405  
+MassGIS Import, 7920  
+ingalls_imports, 4058  
+Ahlzen, 3364  
 mapper999, 1891   
 
 The contributions of the Top 10 users is incredibly skewed as they weight over 92% of total contributions [Top 10 / (nodes + ways)].   
@@ -184,26 +184,26 @@ FROM (SELECT key,value FROM ways_tags UNION ALL SELECT key,value FROM nodes_tags
 WHERE temp.key='amenity' GROUP BY temp.value ORDER BY num DESC LIMIT 20;"
 ```
 
-parking, 166
-bench, 138
-school, 96
-restaurant, 79
-parking_space, 57
-place_of_worship, 56
-library, 38
-cafe, 33
-bicycle_parking, 32
-fast_food, 26
-bicycle_rental, 17
-pub, 13
-university, 13
-fire_station, 12
-bar, 11
-hospital, 11
-bank, 10
-post_box, 10
-fountain, 9
-fuel, 9    
+parking, 166  
+bench, 138  
+school, 96  
+restaurant, 79  
+parking_space, 57  
+place_of_worship, 56  
+library, 38  
+cafe, 33  
+bicycle_parking, 32  
+fast_food, 26  
+bicycle_rental, 17  
+pub, 13  
+university, 13  
+fire_station, 12  
+bar, 11  
+hospital, 11  
+bank, 10  
+post_box, 10  
+fountain, 9  
+fuel, 9      
 </br>
 </br>
  
