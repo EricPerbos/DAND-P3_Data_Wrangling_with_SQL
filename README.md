@@ -239,9 +239,11 @@ query = "SELECT count(*)
 
 A follow-up project could focus on a verification of:
 
-(1) what part of the bad performance is due to missing information, ie. how many amenities DO HAVE wheelchair accessibility but that information went MIA,
+(1) what part of the bad performance is due to missing information,   
+ie. how many amenities DO HAVE wheelchair accessibility but that information went MIA,
 
-(2) and what part is reflective of the true situation, ie. many amenities DO NOT HAVE wheelchair accessibility.
+(2) and what part is reflective of the true situation,  
+ie. many amenities DO NOT HAVE wheelchair accessibility.
 
 **Benefits**: beside the obvious social benefits and duties for helping persons with restrained mobility, there are business opportunities for commerces (shops, restaurants, hotels) who act accordingly.
 
