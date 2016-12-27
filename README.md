@@ -163,7 +163,7 @@ FROM (SELECT user, uid FROM ways UNION ALL SELECT user, uid FROM nodes) as temp
 GROUP BY temp.user ORDER BY posts DESC LIMIT 10;"
 ```   
 
-crschmidt, 150535
+crschmidt, 150535  
 jremillard-massgis, 53877
 OceanVortex, 11457
 wambag, 10019
