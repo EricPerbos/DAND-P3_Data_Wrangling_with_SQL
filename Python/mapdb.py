@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Dec 06 00:46:00 2016
+Stand-alone extract from ProjectCode.ipynb to import CSV to SQL tables and run SQL queries
 
 @author: eric
 """
